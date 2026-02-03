@@ -56,6 +56,8 @@ export class SocietiesService {
   }
 
   async getSocietyVendors(societyId: string) {
+
+    console.log("Hello")
     return this.prisma.societyVendor.findMany({
       where: { societyId, approved: true },
       include: {
